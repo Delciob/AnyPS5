@@ -98,7 +98,6 @@ int APS5_VABI sceLibcBacktraceGetBufferSize_nid_postfix(int limit, int* count, s
     (void)limit;
     (void)count;
     (void)size;
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
@@ -107,7 +106,6 @@ int APS5_VABI sceLibcBacktraceSelf_nid_postfix(int limit, void* buffer, std::siz
     (void)buffer;
     (void)size;
     (void)count;
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 

@@ -39,13 +39,13 @@ bool APS5_VABI CursorValidRegister(_Unwind_Context* context, int number) {
 
 std::uintptr_t APS5_VABI CursorGetRegister(_Unwind_Context* context, int number) {
     auto* value = CursorRegister(context, number);
-    if (!value) NotImplemented_nid_no_patch("libunwind cursor: read of an unknown register");
+    if (!value) throw std::runtime_error(std::string("libunwind cursor: read of an unknown register") + " not implemented");
     return value ? *value : 0;
 }
 
 void APS5_VABI CursorSetRegister(_Unwind_Context* context, int number, std::uintptr_t value) {
     auto* slot = CursorRegister(context, number);
-    if (!slot) NotImplemented_nid_no_patch("libunwind cursor: write of an unknown register");
+    if (!slot) throw std::runtime_error(std::string("libunwind cursor: write of an unknown register") + " not implemented");
     else *slot = value;
 }
 
@@ -58,7 +58,7 @@ bool APS5_VABI CursorIsSignalFrame(_Unwind_Context* context) {
 }
 
 void APS5_VABI CursorUnsupported(_Unwind_Context*) {
-    NotImplemented_nid_no_patch("libunwind cursor: operation other than register access or isSignalFrame");
+    throw std::runtime_error(std::string("libunwind cursor: operation other than register access or isSignalFrame") + " not implemented");
 }
 
 template<class Function> std::uintptr_t Slot(Function function) {

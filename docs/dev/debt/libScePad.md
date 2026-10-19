@@ -1,5 +1,9 @@
 # libScePad technical debt
 
+### Silent stubs
+
+- [libScePad](../../../core/libs/prx/libScePad/Export.cpp) reports `scePadReadExt`, `scePadGetFeatureReport`, `scePadSetFeatureReport` and `scePadOutputReport` return success as silent stubs.
+
 ### Unknown function info
 
 - [scePadUnknown_n3kSX62fgNo](../../../core/libs/prx/libScePad/Export.cpp) (libScePad, NID `n3kSX62fgNo`) - firmware 13.60 returned `0x80920005` before `scePadInit` and `0x809200ff` after it in the #3177 probe; the tested call read or wrote no argument pointers. PPSA15645 calls the import after `scePadOpen`, but its return and side effects in that state are unknown. The NID name and signature are unknown, so the statuses are not named by presumed error meanings

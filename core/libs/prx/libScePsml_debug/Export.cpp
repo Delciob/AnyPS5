@@ -101,14 +101,14 @@ extern "C" {
 std::int32_t APS5_VABI scePsmlMfsrGetContextBufferRequirement1100(void* requirement, const void* param) {
  (void)requirement;
  (void)param;
- if (g_mfsrInitialized) NotImplemented_nid_no_patch(__func__);
+ if (g_mfsrInitialized) throw std::runtime_error("mfsr initialized not implemented");
  return SCE_PSML_ERROR_NOT_INITIALIZED;
 }
 
 std::int32_t APS5_VABI scePsmlMfsrCreateContext1100(void** context, const void* param) {
  (void)context;
  (void)param;
- if (g_mfsrInitialized) NotImplemented_nid_no_patch(__func__);
+ if (g_mfsrInitialized) throw std::runtime_error("mfsr initialized not implemented");
  return SCE_PSML_ERROR_NOT_INITIALIZED;
 }
 
@@ -116,7 +116,7 @@ std::int32_t APS5_VABI scePsmlMfsrGetDispatchMfsrPacket1100(void* context, void*
  (void)context;
  (void)commandBuffer;
  (void)param;
- if (g_mfsrInitialized) NotImplemented_nid_no_patch(__func__);
+ if (g_mfsrInitialized) throw std::runtime_error("mfsr initialized not implemented");
  return SCE_PSML_ERROR_NOT_INITIALIZED;
 }
 
@@ -172,7 +172,7 @@ std::int32_t APS5_VABI scePsmlMfsrReleaseContext(void* context) {
 std::int32_t APS5_VABI scePsmlMfsrCreateContext1300(void** context, const void* param) {
  (void)context;
  (void)param;
- if (g_mfsrInitialized) NotImplemented_nid_no_patch(__func__);
+ if (g_mfsrInitialized) throw std::runtime_error("mfsr initialized not implemented");
  return SCE_PSML_ERROR_NOT_INITIALIZED;
 }
 
@@ -180,32 +180,27 @@ std::int32_t APS5_VABI scePsmlMfsrGetDispatchMfsrPacket1300(void* context, void*
  (void)context;
  (void)commandBuffer;
  (void)param;
- if (g_mfsrInitialized) NotImplemented_nid_no_patch(__func__);
+ if (g_mfsrInitialized) throw std::runtime_error("mfsr initialized not implemented");
  return SCE_PSML_ERROR_NOT_INITIALIZED;
 }
 
 int APS5_VABI scePsmlMfsrGetDispatchMfsrPacketSizeInDwords() {
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
 int APS5_VABI scePsmlMfsrSelectConfig() {
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
 int APS5_VABI scePsmlMfsrGetMipmapBias() {
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
 int APS5_VABI scePsmlMfsrRequestCapture() {
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
 int APS5_VABI scePsmlMfsrIsCaptureInProgress() {
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
@@ -213,7 +208,7 @@ std::int32_t APS5_VABI scePsmlMfsrGetDispatchMfsrPacket1000(void* context, void*
  (void)context;
  (void)commandBuffer;
  (void)param;
- if (g_mfsrInitialized) NotImplemented_nid_no_patch(__func__);
+ if (g_mfsrInitialized) throw std::runtime_error("mfsr initialized not implemented");
  return SCE_PSML_ERROR_NOT_INITIALIZED;
 }
 
@@ -221,62 +216,51 @@ std::int32_t APS5_VABI scePsmlMfsrGetDispatchMfsrPacket900(void* context, void* 
  (void)context;
  (void)commandBuffer;
  (void)param;
- if (g_mfsrInitialized) NotImplemented_nid_no_patch(__func__);
+ if (g_mfsrInitialized) throw std::runtime_error("mfsr initialized not implemented");
  return SCE_PSML_ERROR_NOT_INITIALIZED;
 }
 
 int APS5_VABI scePsmlMfsr2ReleaseSharedResources() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePsmlMfsr2GetSharedResourcesInitRequirement() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePsmlMfsr2GetContextInitRequirement() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePsmlMfsr2ReleaseContext() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePsmlMfsr2GetDispatchPacketsSizeInDwords() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePsmlMfsr2CreateSharedResources() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePsmlMfsr2GetDispatchPackets() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePsmlMfsr2CreateContext() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePsmlMfsr2Init() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePsmlMfsrEnableSpecularAA() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePsmlMfsrEnableQuality8K() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 

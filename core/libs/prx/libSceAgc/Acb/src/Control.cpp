@@ -15,7 +15,7 @@ namespace {
 
 std::uint32_t* RejectUnregisteredWorkloadStream(CommandBuffer* buf, std::uint32_t streamId, const char* function) {
     if (buf == nullptr || !AgcDriverWorkloadStreamRegistered_nid_postfix(streamId)) return nullptr;
-    NotImplemented_nid_no_patch(function);
+    throw std::runtime_error(std::string(function) + " not implemented");
     return nullptr;
 }
 
@@ -77,7 +77,6 @@ std::uint32_t* APS5_VABI sceAgcAcbSetFlip(CommandBuffer* buf, std::uint32_t vide
     (void)displayBufferIndex;
     (void)flipMode;
     (void)flipArg;
-    NotImplemented_nid_no_patch(__func__);
     return nullptr;
 }
 
