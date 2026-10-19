@@ -40,17 +40,14 @@ int APS5_VABI scePadClose_nid_postfix(int handle) {
 }
 
 int APS5_VABI scePadVrControllerSetVibration() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePadVrControllerSetVibrationMode() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 int APS5_VABI scePadVrControllerReadCombinedState() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
@@ -165,17 +162,17 @@ int APS5_VABI scePadOpenExt(int userId, int type, int index, const void* param) 
  if (!ValidPort(userId, type, index) || param == nullptr) {
   return PAD_ERROR_INVALID_ARG;
  }
- if (type != PAD_PORT_TYPE_SPECIAL) NotImplemented_nid_no_patch(__func__);
+ if (type != PAD_PORT_TYPE_SPECIAL) throw std::runtime_error("scePadOpenExt: port type not implemented");
  return PAD_ERROR_DEVICE_NOT_CONNECTED;
 }
 
-int APS5_VABI scePadReadExt() { NotImplemented_nid_no_patch(__func__); return 0; }
+int APS5_VABI scePadReadExt() { return 0; }
 
-int APS5_VABI scePadGetFeatureReport() { NotImplemented_nid_no_patch(__func__); return 0; }
+int APS5_VABI scePadGetFeatureReport() { return 0; }
 
-int APS5_VABI scePadSetFeatureReport() { NotImplemented_nid_no_patch(__func__); return 0; }
+int APS5_VABI scePadSetFeatureReport() { return 0; }
 
-int APS5_VABI scePadOutputReport() { NotImplemented_nid_no_patch(__func__); return 0; }
+int APS5_VABI scePadOutputReport() { return 0; }
 
 int APS5_VABI scePadRead_nid_postfix(int handle, PadData* data, int num) {
  if (handle != PAD_HANDLE) return PAD_ERROR_INVALID_HANDLE;
@@ -270,34 +267,28 @@ int APS5_VABI scePadSetVibrationTriggerEffectWeakWhileEmbeddedMicInUse(bool enab
 }
 
 int APS5_VABI scePadVrControllerGetDeviceInformation() {
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
 int APS5_VABI scePadVrControllerRead() {
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
 int APS5_VABI scePadVrControllerGetTriggerEffectState() {
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
 int APS5_VABI scePadVrControllerReadState(int handle, void* state) {
  (void)handle;
  (void)state;
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
 int APS5_VABI scePadVrControllerSetTriggerEffect() {
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
 int APS5_VABI scePadVrControllerSetTriggerEffects() {
- NotImplemented_nid_no_patch(__func__);
  return 0;
 }
 
@@ -311,24 +302,22 @@ int APS5_VABI scePadIsRemoteController(int handle, bool* remote) {
 
 int APS5_VABI scePadSetAngularVelocityBiasCorrectionState(int handle, bool enabled) {
  if (handle != PAD_HANDLE) return PAD_ERROR_INVALID_HANDLE;
- if (enabled) NotImplemented_nid_no_patch(__func__);
+ if (enabled) throw std::runtime_error("scePadSetAngularVelocityBiasCorrectionState: enabled not implemented");
  return PAD_OK;
 }
 
 APS5_EXPORT("n3kSX62fgNo", scePadUnknown_n3kSX62fgNo);
 int APS5_VABI scePadUnknown_n3kSX62fgNo() {
-    if (g_opened) NotImplemented_nid_no_patch(__func__);
+    if (g_opened) throw std::runtime_error("scePadUnknown_n3kSX62fgNo: opened not implemented");
     return g_initialized.load(std::memory_order_acquire) ? PAD_UNKNOWN_N3KSX62FGNO_AFTER_INIT : PAD_UNKNOWN_N3KSX62FGNO_BEFORE_INIT;
 }
 
 int APS5_VABI scePadVrControllerGetTriggerEffectStates(void) {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
 APS5_EXPORT("zBsgF0q8DIM", scePadUnknown_zBsgF0q8DIM);
 int APS5_VABI scePadUnknown_zBsgF0q8DIM() {
-    NotImplemented_nid_no_patch(__func__);
     return 0;
 }
 
